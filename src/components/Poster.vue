@@ -11,7 +11,8 @@
 <style scoped>
 .header {
     height: 100vh;
-    width: 100vw;
     background-image: url('@/assets/2024/logo.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 </style>
