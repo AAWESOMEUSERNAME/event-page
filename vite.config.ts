@@ -12,5 +12,10 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  css: {
+    modules: {
+      generateScopedName: "[name]__[local]___[hash:base64:4]"
+    }
   }
 })

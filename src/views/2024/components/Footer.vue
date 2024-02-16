@@ -3,10 +3,13 @@
 </script>
 
 <template>
-    <main>
-        
-    </main>
+    <footer>
+        todo
+    </footer>
 </template>
 
 <style scoped>
+footer {
+    background-color: red;
+}
 </style>

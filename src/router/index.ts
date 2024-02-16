@@ -9,7 +9,7 @@ const router = createRouter({
     },
     {
       path: '/2024',
-      component: () => import('../views/2024.vue')
+      component: () => import('../views/2024/2024.vue')
     }
   ]
 })

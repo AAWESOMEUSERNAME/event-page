@@ -6,9 +6,13 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
+import { isMobile } from './utils/device'
+
 const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
+
+window.document.documentElement.style.fontSize = isMobile ? '5px' : '10px'
 
 app.mount('#app')
