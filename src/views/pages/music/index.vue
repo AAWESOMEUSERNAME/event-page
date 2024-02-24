@@ -22,12 +22,19 @@ import DJs from '@/constants/DJs'
         </div>
         <div :class="$style.img"></div>
     </Content>
-    <Content>
+    <Content with-bottom-border>
         <div :class="$style.title">
             DJs
         </div>
         <div :class="$style.dj__container">
-            <div v-for="item in DJs" :class="$style.dj__card">
+            <div v-for="item in DJs.filter(info => info.intro)" :class="$style.dj__card">
+                <div :class="$style.dj__img" :style="{ backgroundImage: `url(${item.img})` }"></div>
+                <div :class="$style.dj__name">{{ item.name }}</div>
+                <div :class="$style.dj__intro">{{ item.intro }}</div>
+            </div>
+        </div>
+        <div :class="$style.dj__container">
+            <div v-for="item in DJs.filter(info => !info.intro)" :class="$style.dj__card">
                 <div :class="$style.dj__img" :style="{ backgroundImage: `url(${item.img})` }"></div>
                 <div :class="$style.dj__name">{{ item.name }}</div>
                 <div :class="$style.dj__intro">{{ item.intro }}</div>
@@ -42,7 +49,7 @@ import DJs from '@/constants/DJs'
 }
 
 .title {
-    font-size: var(--font-h2);
+    font-size: var(--font-h1);
     text-align: center;
     line-height: 1.5em;
 }
@@ -62,20 +69,20 @@ import DJs from '@/constants/DJs'
 }
 
 .dj__container {
-    margin-top: 10rem;
+    margin-top: 8rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
-    column-gap: 6rem;
+    column-gap: 4rem;
     row-gap: 10rem;
 }
 
 .dj__card {
-    width: 30rem;
+    width: 34rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
 }
 
 .dj__img {

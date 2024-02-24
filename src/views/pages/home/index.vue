@@ -16,20 +16,33 @@ function navTo(path: string) {
 
 <template>
     <div :class="$style.intro">
-        <div :class="$style.intro__left">
-            <div :class="$style.intro__title">爵对莱斯<br>Nanjing Lindy Hop Festival</div>
-            <div :class="$style.intro__main">
-                一些关于活动的介绍，一些关于活动的介绍，一些关于活动的介绍，一些关于活动的介绍，，一些关于活动的介绍，一些关于活动的介绍，一些关于活动的介绍，一些关于活动的介绍，一些关于活动的介绍，介绍里可以加超链
+        <div :class="$style.intro__title">爵对莱斯·南京林迪节<br>Nanjing Lindy Fesitival 2024<br>5/31-6/2</div>
+        <div :class="$style.intro__content">
+            <div :class="$style.intro__left">
+                <div :class="$style.intro__main">
+                    在这样一个功能齐全、设备顶级的千人演唱会场地（500平舞池）。请来Swing Shouters、Ryan
+                    Francois等著名国内外老师、优秀DJ、经验丰富的工作团队和全国甚至世界各地的舞者，能创造什么样的可能？更多活动信息请参照微信公众号：爵对莱斯南京摇摆舞。
+                    <br><br>
+                    Top live house in Aisa with 500 ㎡ dancing floor
+                    Top-tier Instructors
+                    First-class Swing Jazz Band and hot DJs
+                    First-class dancers in China
+                    All meet here in Nanjing Lindy Festival 2024
+                    Save your date！
+
+                </div>
+                <div :class="$style.intro__register" @click="navTo(PATH.TICKETS)">报名 REGISTER</div>
             </div>
-            <div :class="$style.intro__register" @click="navTo(PATH.TICKETS)">报名 REGISTER</div>
+            <div :class="$style.intro__right"></div>
         </div>
-        <div :class="$style.intro__right"></div>
     </div>
     <div :class="$style.instructors">
         <div :class="$style.instructors__title">教师&nbsp;&nbsp;INSTRUCTORS</div>
         <div :class="$style.instructors__grid">
             <div v-for="([key, info]) in instructorArr" :class="$style.instructors__card">
-                <div :class="$style.instructors__img" :style="{ backgroundImage: `url(${info.img})`}"></div>
+                <div :class="$style.instructors__img"
+                    :style="{ backgroundImage: `url(${key === 'Ramona' ? info.imgBW : info.img})` }"
+                    @click="navTo(PATH.INSTRUCTORS + '?current=' + key)"></div>
                 <div :class="$style.instructors__name" @click="navTo(PATH.INSTRUCTORS + '?current=' + key)">{{ info.name }}
                 </div>
             </div>
@@ -60,13 +73,19 @@ function navTo(path: string) {
 
 .intro {
     display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
+
+.intro__content {
+    display: flex;
     height: max-content;
-    column-gap: 20%;
+    column-gap: 10%;
 }
 
 .intro__left {
     display: flex;
-    flex: 1.5;
+    flex: 1;
     flex-direction: column;
     align-items: left;
     row-gap: 8rem;
@@ -75,6 +94,7 @@ function navTo(path: string) {
 .intro__title {
     font-size: var(--font-h1);
     line-height: var(--line-height-h1);
+    text-align: center;
 }
 
 .intro__register {
@@ -98,9 +118,10 @@ function navTo(path: string) {
 .intro__right {
     flex: 1;
     min-width: 0;
-    background-image: url('@/assets/images/JIA.jpg');
+    background-image: url('@/assets/images/home_intro.jpg');
     background-size: cover;
     background-position: center;
+    margin-bottom: 20rem;
 }
 
 .instructors,
@@ -134,11 +155,11 @@ function navTo(path: string) {
     background-size: cover;
     background-position: center;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .instructors__name {
     cursor: pointer;
-    text-decoration: underline;
 }
 
 .band {
@@ -167,7 +188,9 @@ function navTo(path: string) {
 
 .tickets__cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 1em;
 }
 
 .tickets__register {

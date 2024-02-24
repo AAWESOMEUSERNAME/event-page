@@ -7,11 +7,14 @@ import wx from '@/assets/images/wx_assistent.jpg'
         <div :class="$style.desc">
             <div>关于我们 About Us</div>
             <div>
-                一些关于NJLH的介绍，一些关于NJLH的介绍，一些关于NJLH的介绍，一些关于NJLH的介绍，一些关于NJLH的介绍，一些关于NJLH的介绍， <br>
+                活动主办 | Organizer<br>
+                爵对莱斯工作室 Laisi Swing Studio<br>
+                策划/运营/统筹 | Planning, Operation, Coordination<br>
+                爵对莱斯南京林迪节活动工作组 <br>
                 <br>
-                微信公众号：爵对莱斯南京摇摆舞<br>
                 Facebook：Nanjing Lindy Festival 2024<br>
-                邮箱 Email：test@test.com
+                微信公众号：爵对莱斯南京摇摆舞<br>
+                邮箱 Email：nanjinglindyfestival@gmail.com
             </div>
         </div>
         <div :class="$style.contact">

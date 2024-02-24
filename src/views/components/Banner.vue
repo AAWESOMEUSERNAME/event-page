@@ -13,10 +13,10 @@ const currentPage = usePage()
 <template>
     <header :class="$style.header + ' ' + (props.size === 'big' ? $style.big : $style.small)"
         :style="{ backgroundImage: `url(${props.imgSrc})` }">
-        <div>
+        <!-- <div>
             <span>{{ props.size === 'small' ? (currentPage?.nameEn ?? '') : '' }}</span>
             <span>{{ props.size === 'small' ? (currentPage?.nameCn ?? '') : '' }}</span>
-        </div>
+        </div> -->
     </header>
 </template>
 
