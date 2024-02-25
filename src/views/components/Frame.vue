@@ -1,18 +1,13 @@
 <script setup lang='ts'>
-import Banner from './Banner.vue';
-import Navigator from './Navigator.vue';
+import bigBanner from '@/assets/images/banner/big.jpg';
 import { PATH } from '@/constants/pages';
-import Footer from './Footer.vue';
-import bigBanner from '@/assets/images/banner/big.jpg'
-import { usePage } from '../utils/functions';
 import { computed } from 'vue';
-import { useRouter } from 'vue-router';
-import { isMobile } from '@/utils/device';
-const router = useRouter()
-const currentPath = router.currentRoute.value.path
-if (isMobile && !currentPath.indexOf('mobile')) {
-    router.replace('/mobile/' + currentPath)
-}
+import { usePage } from '../utils/functions';
+import Banner from './Banner.vue';
+import Footer from './Footer.vue';
+import Navigator from './Navigator.vue';
+
+import { RouterView } from 'vue-router';
 
 const currentPage = usePage()
 const currentBannerSrc = computed(() => currentPage?.value?.path === PATH.HOME ? bigBanner : currentPage?.value?.banner ?? '')

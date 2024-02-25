@@ -9,7 +9,7 @@ const instructorArr = Object.entries(instructors)
 <template>
     <Content with-bottom-border :custom-cls="{ inner: $style.inner }">
         <InstructorCard v-for="([key, info], inx) in instructorArr" :img-position="inx % 2 === 0 ? 'left' : 'right'"
-            :name="info.name" :img-src="info.img" :text="info.intro" />
+            :name="info.name" :img-src="info.img" :textEn="info.introEn" :textCn="info.introCn"/>
     </Content>
 </template>
 

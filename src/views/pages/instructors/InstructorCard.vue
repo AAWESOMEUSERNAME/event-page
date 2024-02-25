@@ -4,7 +4,8 @@ const props = defineProps<{
     imgPosition: 'left' | 'right',
     imgSrc: string
     name: string
-    text: string
+    textCn: string
+    textEn: string
 }>()
 </script>
 
@@ -14,7 +15,10 @@ const props = defineProps<{
             <div :style="{ backgroundImage: `url(${props.imgSrc})` }"></div>
             <div> {{ props.name }} </div>
         </div>
-        <div :class="$style.desc">{{ text }}</div>
+        <div :class="$style.desc">
+            <div>{{ textCn }}</div>
+            <div>{{ textEn }}</div>
+        </div>
         <div :class="$style.img" v-if="props.imgPosition === 'right'">
             <div :style="{ backgroundImage: `url(${props.imgSrc})` }"></div>
             <div> {{ props.name }} </div>
@@ -26,6 +30,15 @@ const props = defineProps<{
 .container {
     display: flex;
     column-gap: 4em;
+}
+
+.desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.desc div:first-child{
+    margin-bottom: 1em;
 }
 
 .img {

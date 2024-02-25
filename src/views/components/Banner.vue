@@ -1,22 +1,14 @@
 <script setup lang='ts'>
-import { usePage } from '../utils/functions';
 
 const props = defineProps<{
     imgSrc: string
     size: 'small' | 'big'
 }>()
-
-const currentPage = usePage()
-
 </script>
 
 <template>
     <header :class="$style.header + ' ' + (props.size === 'big' ? $style.big : $style.small)"
         :style="{ backgroundImage: `url(${props.imgSrc})` }">
-        <!-- <div>
-            <span>{{ props.size === 'small' ? (currentPage?.nameEn ?? '') : '' }}</span>
-            <span>{{ props.size === 'small' ? (currentPage?.nameCn ?? '') : '' }}</span>
-        </div> -->
     </header>
 </template>
 

@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import Content from '@/views/components/Content.vue';
+import Content from '@/views/components/Content_mb.vue';
 import img1701 from '@/assets/images/1701.gif'
 import img1701_2 from '@/assets/images/1701.jpg'
 import imgMap from '@/assets/images/map.png'
@@ -9,7 +9,7 @@ import imgMap from '@/assets/images/map.png'
 
 <template>
     <Content with-bottom-border>
-        <div :class="$style.img" :style="{ backgroundImage: `url(${img1701})` }"></div>
+        <div :class="$style.img" :style="{ backgroundImage: `url(${img1701_2})` }"></div>
         <div :class="$style.title">1701 MAX</div>
         <div>
             1701 Live House Max 总面积有1000多平，包含观演区、酒水区、 舞台区、后台等，1701 Live House 总面积有400多平。<br>
@@ -17,7 +17,8 @@ import imgMap from '@/assets/images/map.png'
             Swing Jazz Band, hot DJs, and full-energy extraordinary dancers in China are all here at Nanjing Lindy Festival
             2024! Save your date！<br>
         </div>
-        <div :class="$style.img" :style="{ backgroundImage: `url(${img1701_2})` }"></div>
+
+        <div :class="$style.img" :style="{ backgroundImage: `url(${imgMap})` }"></div>
         <div :class="$style.title">地理位置及交通<br>Location & Transport</div>
         <div>
             出发：南京南站<br>
@@ -28,9 +29,6 @@ import imgMap from '@/assets/images/map.png'
             To：1701 Live House Max<br>
             Taxi/Car：5 KM. 8-16 minutes<br>
             Subway： Metro Line 1 to Tianlongsi Station and then take a 13 minutes’ walk<br><br>
-
-
-
             <br>
             出发：南京禄口国际机场<br>
             到达：1701 Live House Max<br>
@@ -42,7 +40,7 @@ import imgMap from '@/assets/images/map.png'
             Subway： Take Metro Line S1 to Nanjing South Railway Station, transfer to S3 to Tiexinqiao Station and then take
             a 10 minutes’ walk
         </div>
-        <div :class="$style.img" :style="{ backgroundImage: `url(${imgMap})` }"></div>
+
     </Content>
 </template>
 
