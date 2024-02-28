@@ -20,7 +20,7 @@ function navTo(path: string) {
         <div :class="$style.intro__content">
             <div :class="$style.intro__left">
                 <div :class="$style.intro__main">
-                    在这样一个功能齐全、设备顶级的千人演唱会场地（500平舞池）。请来Swing Shouters、Ryan
+                    在这样一个功能齐全、设备顶级的千人演唱会场地（500平舞池），请来Swing Shouters、Ryan
                     Francois等著名国内外老师、优秀DJ、经验丰富的工作团队和全国甚至世界各地的舞者，能创造什么样的可能？更多活动信息请参照微信公众号：爵对莱斯南京摇摆舞。
                     <br><br>
                     Top live house in Aisa with 500 ㎡ dancing floor

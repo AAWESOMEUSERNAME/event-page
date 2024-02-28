@@ -13,7 +13,7 @@ import Content from '@/views/components/Content_mb.vue';
             <br>
             Attention: <br>
             You should hold Party Pass or Full Pass to participate the competition.<br>
-            You can choose not to compete but you cannot tranfer your competition spot.<br>
+            You can choose not to compete but you cannot tranfer your competition slot.<br>
         </div>
         <div :class="$style.title">林迪舞固定搭赛（公开组）<br>Lindy Hop Open Strictly</div>
         <div>
@@ -40,7 +40,7 @@ import Content from '@/views/components/Content_mb.vue';
                 </li>
                 <li>
                     决赛。4对选手同时跳，时长约2分钟。现场乐队伴奏。现场选出冠军，同时，在颁奖环节评选第二、三名。<br>
-                    Final. 4couples who survives the semi final will dance in one group. Same rules with semi final. Live
+                    Final. 4 couples who survives the semi final will dance in one group. Same rules with semi final. Live
                     music. Judges will choose the Champion couple who will get the bonus of RMB 6000. During the awarding
                     session, we will announce the 2nd and 3rd place.
                 </li>
@@ -80,8 +80,8 @@ import Content from '@/views/components/Content_mb.vue';
                 <li>
                     决赛，Spotlight。进入决赛的选手，根据裁判要求，在比赛现场随机搭配舞伴。每一对选手依次轮流出场，第一轮出场16*8，第二轮出场12*8，第二轮结束后All
                     Skate。国际裁判将评选出三对选手分别获得第一、二、三名。<br>
-                    Final. Spotlight. Every couple will dance two rounds. Bpm 110-200. Live Band. 32 bar the first round and
-                    12 bar the second round and all skate.
+                    Final. Spotlight. Every couple will dance two rounds. Bpm 110-200. Live Band. 32 bar structure the first
+                    round and 12 bar structure the second round.
                 </li>
             </ol>
             <br>

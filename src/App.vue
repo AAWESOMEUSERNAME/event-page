@@ -12,7 +12,6 @@ watchEffect(() => {
   } else if (!isMobile && currentPath.indexOf(MOBILE_PREFIX) >= 0) {
     router.replace({ path: currentPath.replace(MOBILE_PREFIX, '') })
   }
-  console.log(router.currentRoute.value, currentPath.indexOf(MOBILE_PREFIX))
 })
 
 </script>

@@ -17,7 +17,7 @@ import DJs from '@/constants/DJs'
             长号：Benoist Pasquier<br>
             低音提琴 - 主唱：Carl Cordelier<br>
             鼓：Alban Aupert<br>
-            吉他 - 主唱：David Ménager<br><br>
+            吉他 - 主唱：Pierre Mager-Maury<br><br>
             Swing Shouters is a quintet with a powerful and communicative energy who arranges and plays jazz standards from
             30’s to 40’s.As the band was born within the dance school Swing & Shout (Tours, France) their music is ideal for
             swing dancers.With more than 300 gigs under their belt the Swing Shouters had become one of the most popular
@@ -27,7 +27,7 @@ import DJs from '@/constants/DJs'
             Trombone : Benoist Pasquier<br>
             Doublebass - Vocals : Carl Cordelier<br>
             Drums : Alban Aupert<br>
-            Guitar - Vocals : David Ménager
+            Guitar - Vocals : Pierre Mager-Maury
         </div>
         <div :class="$style.img"></div>
     </Content>
@@ -44,11 +44,7 @@ import DJs from '@/constants/DJs'
             </div>
         </div>
         <div :class="$style.dj__container">
-            <div v-for="item in DJs.filter(info => !info.intro)" :class="$style.dj__card">
-                <div :class="$style.dj__img" :style="{ backgroundImage: `url(${item.img})` }"></div>
-                <div :class="$style.dj__name">{{ item.name }}</div>
-                <div :class="$style.dj__intro">{{ item.intro }}</div>
-            </div>
+            More to be announced!
         </div>
     </Content>
 </template>

@@ -13,9 +13,9 @@ import imgMap from '@/assets/images/map.png'
         <div :class="$style.title">1701 MAX</div>
         <div>
             1701 Live House Max 总面积有1000多平，包含观演区、酒水区、 舞台区、后台等，1701 Live House 总面积有400多平。<br>
-            1701 Live House Max, the top live house in Asia with 500 ㎡ dancing floor. Fabulous Instructors, a First-class
-            Swing Jazz Band, hot DJs, and full-energy extraordinary dancers in China are all here at Nanjing Lindy Festival
-            2024! Save your date！<br>
+            1701 Live House Max, the top live house in Asia with 500 ㎡ dancing floor. Fabulous Instructors, first-class
+            swing jazz band, hot DJs and full-energy extraordinary dancers in China are all here at Nanjing Lindy Festival
+            2024! Save your date!<br>
         </div>
 
         <div :class="$style.img" :style="{ backgroundImage: `url(${imgMap})` }"></div>

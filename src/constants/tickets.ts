@@ -93,6 +93,6 @@ export const ticketInfos: TicketInfo[] = [
             '3 Nights Party',
             'No Ticket For Single Day'
         ],
-        price: '￥1780'
+        price: '￥880'
     },
 ]
