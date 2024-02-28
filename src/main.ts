@@ -1,4 +1,6 @@
-isMobile ? import('./assets/main_mb.css') : import('./assets/main.css')
+import './assets/main_mb.css'
+import './assets/main.css'
+import './assets/base.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -14,5 +16,6 @@ app.use(createPinia())
 app.use(router)
 
 window.document.documentElement.style.fontSize = isMobile ? '6px' : '10px'
+window.document.body.setAttribute('class', isMobile ? 'mb' : '')
 
 app.mount('#app')

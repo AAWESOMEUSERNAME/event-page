@@ -1,9 +1,3 @@
-@import url('./base.css');
-
-body {
-
-}
-
-ul{
+.mb ul{
     padding: 0;
 }
