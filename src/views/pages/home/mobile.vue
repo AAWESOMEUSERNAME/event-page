@@ -38,7 +38,7 @@ function navTo(path: string) {
         <div :class="$style.instructors__content">
             <div v-for="([key, info]) in instructorArr" :class="$style.instructors__card">
                 <div :class="$style.instructors__img"
-                    :style="{ backgroundImage: `url(${key === 'Ramona' && 'imgBW' in info ? info.imgBW : info.img})` }"
+                    :style="{ backgroundImage: `url(${info.img})` }"
                     @click="navTo(PATH.INSTRUCTORS + '?current=' + key)"></div>
                 <div :class="$style.instructors__name" @click="navTo(PATH.INSTRUCTORS + '?current=' + key)">{{ info.name }}
                 </div>
